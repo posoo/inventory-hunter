@@ -17,7 +17,7 @@ usage() {
 [ $# -eq 0 ] && usage
 
 alerter="email"
-default_image="ericjmarti/inventory-hunter:latest"
+default_image="posoo/inventory-hunter:latest"
 image=$default_image
 network="inventory_hunter"
 

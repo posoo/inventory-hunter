@@ -24,13 +24,13 @@ These steps *should* work on any supported Docker platform, but they have been s
 1. Clone this repository and pull the latest image from [Docker Hub](https://hub.docker.com/r/ericjmarti/inventory-hunter):
     ```
     pi@raspberrypi:~
-    $ git clone https://github.com/EricJMarti/inventory-hunter
+    $ git clone https://github.com/posoo/inventory-hunter
 
     pi@raspberrypi:~
     $ cd inventory-hunter
 
     pi@raspberrypi:~/inventory-hunter
-    $ docker pull ericjmarti/inventory-hunter:latest
+    $ docker pull posoo/inventory-hunter:latest
     ```
 
 2. Create your own configuration file based on one of the provided examples:
@@ -101,7 +101,9 @@ If you are interested in configuring multiple alerters or would like to keep you
           - XXXXXXXXXXXXXXX
       telegram:
         webhook_url: https://api.telegram.org/botXXXXXXXXXXXXXXXXXXXX/sendMessage
-        chat_id: XXXXXXXX
+        chat_ids:
+          - XXXXXXXX
+          - XXXXXXXX
       email:
         sender: myemail@email.com
         recipients:
